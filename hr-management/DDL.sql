@@ -6,7 +6,7 @@ hire_dt date);
 create table employee_history ( id SERIAL primary key,
 emp_id varchar(8),
 job_id int,
-salary int,
+salary_id int,
 dep_id int,
 manager_id varchar(8),
 start_dt date,
@@ -34,3 +34,6 @@ state_nm varchar(2));
 
 create table education (id SERIAL primary key,
 education_lvl varchar(50));
+
+create table salary (id SERIAL primary key,
+salary int);

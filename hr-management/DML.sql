@@ -6,7 +6,10 @@ select
 from
 	proj_stg;
 
-select * from education e ;
+select
+	*
+from
+	education e ;
 
 insert
 	into
@@ -16,7 +19,10 @@ select
 from
 	proj_stg;
 
-select * from job j ;
+select
+	*
+from
+	job j ;
 
 insert
 	into
@@ -26,7 +32,10 @@ select
 from
 	proj_stg;
 
-select * from department d ;
+select
+	*
+from
+	department d ;
 
 insert
 	into
@@ -36,7 +45,10 @@ select
 from
 	proj_stg;
 
-select * from state s ;
+select
+	*
+from
+	state s ;
 
 insert
 	into
@@ -44,14 +56,17 @@ insert
 	state_id)
 select
 	distinct p.city,
-	st.id 
+	st.id
 from
 	proj_stg as p
 inner join state as st
 on
 	p.state = st.state_nm;
 
-select * from city c ;
+select
+	*
+from
+	city c ;
 
 insert
 	into
@@ -61,14 +76,17 @@ insert
 select
 	distinct p.location,
 	p.address,
-	c.id 
+	c.id
 from
 	proj_stg as p
 inner join city as c 
 on
 	p.city = c.city_nm;
 
-select * from "location" l ;
+select
+	*
+from
+	"location" l ;
 
 insert
 	into
@@ -84,13 +102,29 @@ select
 from
 	proj_stg as p;
 
-select * from employee e ;
+select
+	*
+from
+	employee e ;
+
+insert
+	into
+	salary (salary)
+select
+	distinct salary
+from
+	proj_stg ;
+
+select
+	*
+from
+	salary ;
 
 insert
 	into
 	employee_history (emp_id,
 	job_id,
-	salary,
+	salary_id ,
 	dep_id,
 	manager_id,
 	start_dt,
@@ -100,7 +134,7 @@ insert
 select
 	p.emp_id,
 	job.id,
-	p.salary ,
+	s.id ,
 	dep.id ,
 	(
 	select
@@ -126,6 +160,12 @@ on
 	loc.location_nm = p."location"
 inner join education edu
 on
-	edu.education_lvl = p.education_lvl;
+	edu.education_lvl = p.education_lvl
+inner join salary s 
+on
+	s.salary = p.salary ;
 
-select * from employee_history eh ;
+select
+	*
+from
+	employee_history eh ;

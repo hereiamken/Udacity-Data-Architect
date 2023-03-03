@@ -84,7 +84,7 @@ select
 	e.email ,
 	e.hire_dt,
 	j.job_title ,
-	eh.salary,
+	sa.salary,
 	d.dep_nm ,
 	(
 	select
@@ -121,6 +121,9 @@ on
 inner join education ed 
 on
 	ed.id = eh.education_id 
+inner join salary sa
+on 
+	sa.id = eh.salary_id
 );
 
 select
