@@ -1,0 +1,9 @@
+File/Table storage    	                                        Raw files       Staging tables      ODS tables
+yelp_academic_dataset_covid_features.json                       64.8 MB               5.0 MB           5.0 MB   
+yelp_dataset/yelp_academic_dataset_business.json               118.9 MB              11.0 MB          11.5 MB
+yelp_dataset/yelp_academic_dataset_checkin.json                287 MB                80.5 MB          82.5 MB
+yelp_dataset/yelp_academic_dataset_review.json                   5.34 GB              1.9 GB           1.9 GB
+yelp_dataset/yelp_academic_dataset_tip.json                    180.6 MB              46.1 MB          45.7 MB
+yelp_academic_dataset_user.json                                  3.36 GB              1.8 GB           1.8 GB
+usw00023169-las-vegas-mccarran-intl-ap-precipitation-inch.csv  528 KB                 120 KB         178.5 KB
+usw00023169-temperature-degreef.csv                            819 KB                 217 KB           225 KB
